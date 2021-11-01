@@ -1,0 +1,206 @@
+@import url("https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@700&family=Space+Mono:wght@400;700&display=swap");
+:root {
+  --StrongCyan: hsl(172, 67%, 45%);
+  --VeryDarkCyan: hsl(183, 100%, 15%);
+  --DarkGrayishCyan1: hsl(186, 14%, 43%);
+  --DarkGrayishCyan2: hsl(186, 14%, 56%);
+  --LightGrayishCyan1: hsl(185, 41%, 84%);
+  --LightGrayishCyan2: hsl(185, 41%, 97%);
+  --White: hsl(0, 0%, 100%);
+}
+
+body {
+  background-color: var(--LightGrayishCyan1);
+  min-height: 100vh;
+  width: 100vw;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-family: Red Hat Display;
+}
+
+.container {
+  width: 60%;
+  min-width: 375px;
+  min-height: 80%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 150px;
+}
+
+.header {
+  display: flex;
+  flex-direction: column;
+  width: fit-content;
+  letter-spacing: 4px;
+  margin-bottom: 50px;
+}
+
+.calculator {
+  background: var(--White);
+  width: 100%;
+  min-height: 300px;
+  display: flex;
+  padding: 20px;
+  border-radius: 20px;
+}
+
+.first-half {
+  display: flex;
+  flex-direction: column;
+  flex: 0.5;
+  justify-content: space-between;
+  padding: 5px;
+  padding-right: 40px;
+}
+
+.second-half {
+  display: flex;
+  flex-direction: column;
+  flex: 0.5;
+  padding: 40px;
+  justify-content: space-between;
+  background-color: var(--VeryDarkCyan);
+  border-radius: 20px;
+}
+
+.first-half .form div {
+  color: var(--DarkGrayishCyan1);
+}
+
+.first-half .form {
+  width: 100%;
+}
+
+.first-half .form input {
+  width: 100%;
+  border: none;
+  background-color: var(--LightGrayishCyan2);
+  padding: 8px;
+  border-radius: 1px;
+  outline: none;
+  text-align: end;
+  font-size: 20px;
+  color: var(--VeryDarkCyan);
+}
+
+.first-half .form input::placeholder {
+  color: var(--DarkGrayishCyan2);
+  text-align: end;
+}
+
+.input-container {
+  display: -ms-flexbox; /* IE10 */
+  display: flex;
+  width: 100%;
+  margin-bottom: 15px;
+}
+
+.icon {
+  padding: 10px;
+  background: var(--LightGrayishCyan2);
+  color: var(--LightGrayishCyan1);
+  min-width: 30px;
+  text-align: center;
+}
+
+.btn1 {
+  width: 30%;
+  margin: 5px;
+  padding: 8px;
+  border: none;
+  background-color: var(--VeryDarkCyan);
+  color: var(--LightGrayishCyan1);
+  border-radius: 3px;
+  cursor: pointer;
+  font-size: 20px;
+}
+
+.mid div {
+  color: var(--DarkGrayishCyan1);
+  margin-bottom: 5px;
+}
+
+.btn2 {
+  width: 30%;
+  margin: 5px;
+  padding: 8px;
+  border: none;
+  background-color: var(--LightGrayishCyan2);
+  color: var(--DarkGrayishCyan1);
+  border-radius: 3px;
+  cursor: pointer;
+  font-size: 18px;
+}
+
+.amount {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.amount div {
+  display: flex;
+  flex-direction: column;
+  color: var(--LightGrayishCyan1);
+}
+
+.amount span {
+  color: var(--DarkGrayishCyan2);
+  font-size: 12px;
+}
+
+.amount strong {
+  font-size: 28px;
+  color: var(--StrongCyan);
+}
+
+.btn3 {
+  background-color: var(--StrongCyan);
+  border: none;
+  outline: none;
+  cursor: pointer;
+  width: 100%;
+  align-self: center;
+  padding: 10px;
+  border-radius: 3px;
+  color: var(--VeryDarkCyan);
+  font-weight: 700;
+}
+
+@media only screen and (max-width: 376px) {
+  .container {
+    width: 100vw;
+    margin-top: 40px;
+  }
+  .calculator {
+    flex-direction: column;
+    align-items: center;
+    flex: 1;
+  }
+  .first-half {
+    align-items: center;
+    padding-right: 20px;
+    padding: 20px;
+  }
+  .mid div {
+    margin-left: 5px;
+  }
+  .btn1 {
+    width: 45%;
+  }
+  .btn2 {
+    width: 45%;
+  }
+  .second-half {
+    padding: 20px;
+    width: 80%;
+    flex: 1;
+  }
+  .amount {
+    margin-bottom: 30px;
+  }
+}

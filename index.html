@@ -5,40 +5,58 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
 
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="stylesheet" href="./styles.css" >
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   
-  <title>Frontend Mentor | Tip calculator app</title>
+  <title>Tip calculator app</title>
 
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
 </head>
 <body>
+  <div class= "container">
+    <div class="header"><span>SPLI</span><span>TTER</span></div>
 
-  Bill
+    <div class="calculator">
+      <div class = "first-half">
+        <div class = "form">
+          <div> Bill </div>
+          <div class="input-container">
+            <i class="fa fa-usd icon"></i>
+            <input type="text" placeholder="0" >
+          </div>
+        </div>
 
-  Select Tip %
-  5%
-  10%
-  15%
-  25%
-  50%
-  Custom
+        <div class="mid">
+          <div>Select Tip %</div>
+          <button class="btn1">5%</button>
+          <button class="btn1">10%</button>
+          <button class="btn1">15%</button>
+          <button class = "btn1">25%</button>
+          <button class= "btn1">50%</button>
+          <button class = "btn2">Custom</button>
+        </div>
 
-  Number of People
+        <div class = "form">
+          <div> Number Of People </div>
+          <div class="input-container">
+            <i class="fa fa-user icon"></i>
+            <input type="text" placeholder="0" >
+          </div>
+        </div>
+      </div>
 
-  Tip Amount
-  / person
-
-  Total
-  / person
-
-  Reset
-  
-  <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
+      <div class="second-half">
+        <div class="amount">
+          <div>Tip Amount <span>/ person</span></div>
+          <strong>$0.00</strong>
+        </div>
+        <div class="amount">
+          <div>Tip Amount <span>/ person</span></div>
+          <strong>$0.00</strong>
+        </div>
+        <button class = "btn3">RESET</button>
+      </div>
+      
+    </div>
   </div>
 </body>
 </html>
