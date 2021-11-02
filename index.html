@@ -10,6 +10,8 @@
   
   <title>Tip calculator app</title>
 
+  <script src = "index.js"></script>
+  
 </head>
 <body>
   <div class= "container">
@@ -21,17 +23,17 @@
           <div> Bill </div>
           <div class="input-container">
             <i class="fa fa-usd icon"></i>
-            <input type="text" placeholder="0" >
+            <input id="bill" type="number" placeholder="0" value=0>
           </div>
         </div>
 
         <div class="mid">
           <div>Select Tip %</div>
-          <button class="btn1">5%</button>
-          <button class="btn1">10%</button>
-          <button class="btn1">15%</button>
-          <button class = "btn1">25%</button>
-          <button class= "btn1">50%</button>
+          <button onclick = "display(document.getElementById('bill').value,document.getElementById('num_of_people').value,5)" class="btn1" >5%</button>
+          <button class="btn1" onclick = "display(document.getElementById('bill').value,document.getElementById('num_of_people').value,10)">10%</button>
+          <button class="btn1" onclick = "display(document.getElementById('bill').value,document.getElementById('num_of_people').value,15)">15%</button>
+          <button class = "btn1" onclick = "display(document.getElementById('bill').value,document.getElementById('num_of_people').value,25)">25%</button>
+          <button class= "btn1" onclick = "display(document.getElementById('bill').value,document.getElementById('num_of_people').value,50)">50%</button>
           <button class = "btn2">Custom</button>
         </div>
 
@@ -39,7 +41,7 @@
           <div> Number Of People </div>
           <div class="input-container">
             <i class="fa fa-user icon"></i>
-            <input type="text" placeholder="0" >
+            <input type="number"  placeholder="0" id="num_of_people" value=1>
           </div>
         </div>
       </div>
@@ -47,16 +49,18 @@
       <div class="second-half">
         <div class="amount">
           <div>Tip Amount <span>/ person</span></div>
-          <strong>$0.00</strong>
+          <strong id="tip">$0.00</strong>
         </div>
         <div class="amount">
-          <div>Tip Amount <span>/ person</span></div>
-          <strong>$0.00</strong>
+          <div>Total <span>/ person</span></div>
+          <strong id="total">$0.00</strong>
         </div>
-        <button class = "btn3">RESET</button>
+        <button class = "btn3" onclick="reset()" >RESET</button>
       </div>
       
     </div>
   </div>
+
+ 
 </body>
 </html>
